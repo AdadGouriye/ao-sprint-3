@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainPage.EventFunctions.cs" />
     <Compile Include="MainPage.EventHandlers.xaml.cs" />
     <Compile Include="MainPage.EventNumbers.cs" />
     <Compile Include="MainPage.xaml.cs">
