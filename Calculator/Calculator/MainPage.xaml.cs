@@ -35,16 +35,14 @@ namespace Calculator
             this.InitializeComponent();
         }
 
-       
+
 
         /* ------------------------------------------------------------------ /
         / ---------------- Dollars to Euro's function "$ → €" --------------- /
         / ------------------------------------------------------------------ */
         private void buttonDoll2Euro_Click(object sender, RoutedEventArgs e)
         {
-            firstNumber = Convert.ToDouble(TextBoxDisplay.Text);
-            firstNumber /= 1.1016;
-            TextBoxDisplay.Text = Convert.ToString(firstNumber);
+            TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) / 1.1016);
         }
 
         /* ------------------------------------------------------------------ /
@@ -52,10 +50,9 @@ namespace Calculator
         / ------------------------------------------------------------------ */
         private void buttonEuro2Doll_Click(object sender, RoutedEventArgs e)
         {
-            firstNumber = Convert.ToDouble(TextBoxDisplay.Text);
-            firstNumber *= 1.1016;
-            TextBoxDisplay.Text = Convert.ToString(firstNumber);
+            TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) * 1.1016);
         }
+    }
 
         /* ---------------------------------------------------------- /
         / ------------------- BIN function "BIN" -------------------- /
