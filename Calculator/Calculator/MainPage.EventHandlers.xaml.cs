@@ -50,54 +50,5 @@ namespace Calculator
                 TextBoxDisplay.Text = "0";
             }
         }
-
-        /* ----------------------------------------------------------- /
-        / ---------- Start of adding functional operations ----------- /
-        / ---------- Add, subtract, dividing, multiply and Modulo ---- /
-        / ----------------------------------------------------------- */
-        private void buttonAdd_Click(object sender, RoutedEventArgs e)
-        {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("+");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " + ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
-        }
-
-        private void buttonSubstract_Click(object sender, RoutedEventArgs e)
-        {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("-");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " - ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
-        }
-
-        private void buttonMultiply_Click(object sender, RoutedEventArgs e)
-        {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("*");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " * ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
-        }
-
-        private void buttonDivide_Click(object sender, RoutedEventArgs e)
-        {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("/");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " / ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
-        }
-
-        private void buttonMod_Click(object sender, RoutedEventArgs e)
-        {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("%");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " % ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
-        }
     }
 }
