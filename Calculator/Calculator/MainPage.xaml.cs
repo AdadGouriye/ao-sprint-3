@@ -28,7 +28,7 @@ namespace Calculator
         bool comma = false; /* This is to check if a comma has been used or not */
         List<double> numbers = new List<double>();
         List<string> operations = new List<string>();
-        
+
 
         public MainPage()
         {
@@ -52,7 +52,9 @@ namespace Calculator
         {
             TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) * 1.1016);
         }
-    }
+
+
+
 
         /* ---------------------------------------------------------- /
         / ------------------- BIN function "BIN" -------------------- /
@@ -106,7 +108,7 @@ namespace Calculator
         / ------------------------------------------------------------ */
         private void buttonHex_Click(object sender, RoutedEventArgs e)
         {
-            if(!clearNext)
+            if (!clearNext)
             {
                 clearNext = true;
                 if (TextBoxDisplay.Text.Contains(","))
@@ -173,4 +175,5 @@ namespace Calculator
             TextBoxDisplay.Text = Convert.ToString(index);
         }
     }
-}
+}   
+
