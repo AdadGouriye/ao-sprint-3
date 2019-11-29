@@ -28,6 +28,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -47,6 +48,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -66,6 +68,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -85,6 +88,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -104,6 +108,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -123,6 +128,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -142,6 +148,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -161,6 +168,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -180,6 +188,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 
@@ -199,6 +208,7 @@ namespace Calculator
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
+                TextBoxHistory.Text = String.Empty;
                 clearNext = false;
             }
 

@@ -74,7 +74,7 @@ namespace Calculator
                 string finalResult = "";
                 clearNext = true;
 
-                if (TextBoxDisplay.Text.Contains(","))
+                if (TextBoxDisplay.Text.Contains("."))
                 {
                     TextBoxDisplay.Text = ("Syntax Error");
                 }
@@ -116,7 +116,7 @@ namespace Calculator
             if (!clearNext)
             {
                 clearNext = true;
-                if (TextBoxDisplay.Text.Contains(","))
+                if (TextBoxDisplay.Text.Contains("."))
                 {
                     TextBoxDisplay.Text = ("Syntax Error");
                 }
