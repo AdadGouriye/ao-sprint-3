@@ -41,7 +41,10 @@ namespace Calculator
         / ------------------------------------------------------------------ */
         private void buttonDoll2Euro_Click(object sender, RoutedEventArgs e)
         {
-            TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) / 1.1016);
+            if (!clearNext)
+            {
+                TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) / 1.1016);
+            }
         }
 
         /* ------------------------------------------------------------------ /
@@ -49,7 +52,10 @@ namespace Calculator
         / ------------------------------------------------------------------ */
         private void buttonEuro2Doll_Click(object sender, RoutedEventArgs e)
         {
-            TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) * 1.1016);
+            if (!clearNext)
+            {
+                TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) * 1.1016);
+            }
         }
 
 
