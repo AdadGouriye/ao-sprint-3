@@ -25,10 +25,6 @@ namespace Calculator
     {
         private void buttonN0_Click(object sender, RoutedEventArgs e)
         {
-            var button = sender as Button;
-            var content = button.Content.ToString();
-            System.Diagnostics.Debug.WriteLine($"sender is {button.Content}");
-
             if (clearNext) /* This if-statment empties the TextBoxDisplay  */
             {
                 TextBoxDisplay.Text = String.Empty;
@@ -36,9 +32,9 @@ namespace Calculator
             }
 
             /*This adds number 0 to the calculator, if there is already 0 nothing happens*/
-            if (TextBoxDisplay.Text == content && TextBoxDisplay.Text != null)
+            if (TextBoxDisplay.Text == "0" && TextBoxDisplay.Text != null)
             {
-                TextBoxDisplay.Text = content;
+                TextBoxDisplay.Text = "0";
             }
             else
             {

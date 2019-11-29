@@ -32,7 +32,6 @@ namespace Calculator
 
         private void buttonC_Click(object sender, RoutedEventArgs e)
         {
-            firstNumber = 0;
             TextBoxDisplay.Text = "0";
             TextBoxHistory.Text = String.Empty;
             comma = false;

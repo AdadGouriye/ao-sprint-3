@@ -23,7 +23,6 @@ namespace Calculator
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        double firstNumber; /*    */
         bool clearNext = false; /* This is a check to see if the Bin/Hex functions has been used */
         bool comma = false; /* This is to check if a comma has been used or not */
         List<double> numbers = new List<double>();
