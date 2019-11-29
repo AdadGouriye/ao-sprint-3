@@ -74,7 +74,7 @@ namespace Calculator
                 string finalResult = "";
                 clearNext = true;
 
-                if (TextBoxDisplay.Text.Contains(","))
+                if (TextBoxDisplay.Text.Contains("."))
                 {
                     TextBoxDisplay.Text = ("Syntax Error");
                 }
@@ -116,7 +116,7 @@ namespace Calculator
             if (!clearNext)
             {
                 clearNext = true;
-                if (TextBoxDisplay.Text.Contains(","))
+                if (TextBoxDisplay.Text.Contains("."))
                 {
                     TextBoxDisplay.Text = ("Syntax Error");
                 }
@@ -175,9 +175,12 @@ namespace Calculator
         / ------------------------------------------------------------------ */
         private void buttonNegate_Click(object sender, RoutedEventArgs e)
         {
-            double index = Convert.ToDouble(TextBoxDisplay.Text);
-            index *= -1;
-            TextBoxDisplay.Text = Convert.ToString(index);
+            if (!clearNext)
+            {
+                double index = Convert.ToDouble(TextBoxDisplay.Text);
+                index *= -1;
+                TextBoxDisplay.Text = Convert.ToString(index);
+            }
         }
     }
 }   

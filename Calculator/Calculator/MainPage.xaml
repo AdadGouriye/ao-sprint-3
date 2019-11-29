@@ -27,7 +27,7 @@
             <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
         <TextBox x:Name="TextBoxHistory" Text="" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsReadOnly="True" InputScope="Digits" FontSize="60" FlowDirection="LeftToRight" TextAlignment="Right" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5"/>
-        <TextBox x:Name="TextBoxDisplay" Text="" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsReadOnly="True" InputScope="Digits" FontSize="80" FlowDirection="LeftToRight" TextAlignment="Right" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5"/>
+        <TextBox x:Name="TextBoxDisplay" Text="0" TextWrapping="Wrap" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsReadOnly="True" InputScope="Digits" FontSize="80" FlowDirection="LeftToRight" TextAlignment="Right" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5"/>
         <Button x:Name="buttonMod" Content="%" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="0" Grid.Row="2" Click="buttonMod_Click"/>
         <Button x:Name="buttonCE" Content="CE" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="1" Grid.Row="2" Click="buttonCE_Click"/>
         <Button x:Name="buttonC" Content="C" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="2" Grid.Row="2" Click="buttonC_Click"/>
@@ -48,7 +48,7 @@
         <Button x:Name="buttonN9" Content="9" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="3" Grid.Row="3" Click="buttonN9_Click"/>
         <Button x:Name="buttonN6" Content="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="3" Grid.Row="4" Click="buttonN6_Click"/>
         <Button x:Name="buttonN3" Content="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="3" Grid.Row="5" Click="buttonN3_Click"/>
-        <Button x:Name="buttonDecimal" Content="," VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="3" Grid.Row="6" Click="buttonDecimal_Click"/>
+        <Button x:Name="buttonDecimal" Content="." VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="3" Grid.Row="6" Click="buttonDecimal_Click"/>
         <Button x:Name="buttonMultiply" Content="x" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="4" Grid.Row="3" Click="buttonMultiply_Click"/>
         <Button x:Name="buttonSubstract" Content="-" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="4" Grid.Row="4" Click="buttonSubstract_Click"/>
         <Button x:Name="buttonAdd" Content="+" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" FontSize="80" Grid.Column="4" Grid.Row="5" Click="buttonAdd_Click"/>

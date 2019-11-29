@@ -217,7 +217,7 @@ namespace Calculator
         {
             if (comma == false)
             {
-                TextBoxDisplay.Text = TextBoxDisplay.Text + ",";
+                TextBoxDisplay.Text = TextBoxDisplay.Text + ".";
                 comma = true;
             }
         }
