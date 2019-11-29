@@ -77,6 +77,7 @@ namespace Calculator
                 if (TextBoxDisplay.Text.Contains("."))
                 {
                     TextBoxDisplay.Text = ("Syntax Error");
+                    clearNext = true;
                 }
                 else
                 {
@@ -119,6 +120,7 @@ namespace Calculator
                 if (TextBoxDisplay.Text.Contains("."))
                 {
                     TextBoxDisplay.Text = ("Syntax Error");
+                    clearNext = true;
                 }
                 else
                 {
@@ -131,7 +133,12 @@ namespace Calculator
 
                     int result = index / 16;
                     int rest = index % 16;
-                    String finalResult = "" + result;
+                    String finalResult = "";
+
+                    if (result != 0)
+                    {
+                        finalResult = "" + result;
+                    }
 
 
                     /* These if statements check if we have to add a letter to the hexadecimal number or not. */
