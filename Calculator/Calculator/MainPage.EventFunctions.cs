@@ -30,47 +30,62 @@ namespace Calculator
         / ----------------------------------------------------------- */
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("+");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " + ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
+            if (!clearNext)
+            {
+                numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
+                operations.Add("+");
+                TextBoxHistory.Text += TextBoxDisplay.Text + " + ";
+                TextBoxDisplay.Text = "0";
+                comma = false;
+            }
         }
 
         private void buttonSubstract_Click(object sender, RoutedEventArgs e)
         {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("-");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " - ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
+            if (!clearNext)
+            {
+                numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
+                operations.Add("-");
+                TextBoxHistory.Text += TextBoxDisplay.Text + " - ";
+                TextBoxDisplay.Text = "0";
+                comma = false;
+            }
         }
 
         private void buttonMultiply_Click(object sender, RoutedEventArgs e)
         {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("*");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " * ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
+            if (!clearNext)
+            {
+                numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
+                operations.Add("*");
+                TextBoxHistory.Text += TextBoxDisplay.Text + " * ";
+                TextBoxDisplay.Text = "0";
+                comma = false;
+            }
         }
 
         private void buttonDivide_Click(object sender, RoutedEventArgs e)
         {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("/");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " / ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
+            if (!clearNext)
+            {
+                numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
+                operations.Add("/");
+                TextBoxHistory.Text += TextBoxDisplay.Text + " / ";
+                TextBoxDisplay.Text = "0";
+                comma = false;
+            }
         }
 
         private void buttonMod_Click(object sender, RoutedEventArgs e)
         {
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            operations.Add("%");
-            TextBoxHistory.Text += TextBoxDisplay.Text + " % ";
-            TextBoxDisplay.Text = "0";
-            comma = false;
+            if (!clearNext)
+            {
+                numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
+                operations.Add("%");
+                TextBoxHistory.Text += TextBoxDisplay.Text + " % ";
+                TextBoxDisplay.Text = "0";
+                comma = false;
+            }
         }
 
         /* ----------------------------------------------------------- /
@@ -78,59 +93,61 @@ namespace Calculator
         / ----------------------------------------------------------- */
         private void buttonResult_Click(object sender, RoutedEventArgs e)
         {
-
-            TextBoxHistory.Text += TextBoxDisplay.Text + " =";
-            numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
-            int index = 0;
-
-            while (operations.Contains("%"))
+            if (!clearNext)
             {
-                Modulo();
-            }
-            while (operations.Contains("*") || operations.Contains("/"))
-            {
-                if (operations.Contains("*") && operations.Contains("/"))
+                TextBoxHistory.Text += TextBoxDisplay.Text + " =";
+                numbers.Add(Convert.ToDouble(TextBoxDisplay.Text));
+                int index = 0;
+
+                while (operations.Contains("%"))
                 {
-                    var indexmaal = operations.IndexOf("*");
-                    var indexdeel = operations.IndexOf("/");
-                    if (indexdeel < indexmaal)
-                        Divide();
-                    else
+                    Modulo();
+                }
+                while (operations.Contains("*") || operations.Contains("/"))
+                {
+                    if (operations.Contains("*") && operations.Contains("/"))
+                    {
+                        var indexmaal = operations.IndexOf("*");
+                        var indexdeel = operations.IndexOf("/");
+                        if (indexdeel < indexmaal)
+                            Divide();
+                        else
+                            Multiply();
+                    }
+                    if (operations.Contains("*"))
+                    {
                         Multiply();
+                    }
+                    if (operations.Contains("/"))
+                    {
+                        Divide();
+                    }
                 }
-                if (operations.Contains("*"))
+                while (operations.Contains("+") || operations.Contains("-"))
                 {
-                    Multiply();
-                }
-                if (operations.Contains("/"))
-                {
-                    Divide();
-                }
-            }
-            while (operations.Contains("+") || operations.Contains("-"))
-            {
-                if (operations.Contains("+") && operations.Contains("-"))
-                {
-                    var indexplus = operations.IndexOf("+");
-                    var indexmin = operations.IndexOf("-");
-                    if (indexmin < indexplus)
-                        Substract();
-                    else
+                    if (operations.Contains("+") && operations.Contains("-"))
+                    {
+                        var indexplus = operations.IndexOf("+");
+                        var indexmin = operations.IndexOf("-");
+                        if (indexmin < indexplus)
+                            Substract();
+                        else
+                            Sum();
+                    }
+                    if (operations.Contains("+"))
+                    {
                         Sum();
+                    }
+                    if (operations.Contains("-"))
+                    {
+                        Substract();
+                    }
                 }
-                if (operations.Contains("+"))
-                {
-                    Sum();
-                }
-                if (operations.Contains("-"))
-                {
-                    Substract();
-                }
+
+
+                TextBoxDisplay.Text = Convert.ToString(numbers[0]);
+                numbers.RemoveAt(index);
             }
-
-
-            TextBoxDisplay.Text = Convert.ToString(numbers[0]);
-            numbers.RemoveAt(index);
 
         }
         /* These are the functions we use to Multiplt, Divide, Sum, Substract and Modulo */
