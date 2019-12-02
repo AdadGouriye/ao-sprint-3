@@ -67,6 +67,7 @@ namespace Calculator
         / ---------------------------------------------------------- */
         private void buttonBin_Click(object sender, RoutedEventArgs e)
         {
+            try {
             if (!clearNext)
             {
                 /* Here are all the variables that we are going to need to use */
@@ -107,6 +108,13 @@ namespace Calculator
                     TextBoxDisplay.Text = finalResult;
 
                 }
+            }
+            } catch(OverflowException)
+            {
+                TextBoxDisplay.Text = "NUMBER TO HIGH";
+            } catch(IndexOutOfRangeException)
+            {
+                TextBoxDisplay.Text = "Syntax Error";
             }
         }
 
