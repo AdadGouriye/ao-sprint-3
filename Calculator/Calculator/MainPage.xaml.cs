@@ -24,6 +24,7 @@ namespace Calculator
     public sealed partial class MainPage : Page
     {
         bool clearNext = false; /* This is a check to see if the Bin/Hex functions has been used */
+        bool clearHistory = false; /* This clears the current history for the calculator */
         bool comma = false; /* This is to check if a comma has been used or not */
         List<double> numbers = new List<double>();
         List<string> operations = new List<string>();
