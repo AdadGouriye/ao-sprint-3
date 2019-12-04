@@ -43,6 +43,7 @@ namespace Calculator
         {
             if (!clearNext)
             {
+                TextBoxHistory.Text = TextBoxHistory.Text + "Euro(" + TextBoxDisplay.Text + ")";
                 TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) / 1.1016);
             }
         }
@@ -54,7 +55,9 @@ namespace Calculator
         {
             if (!clearNext)
             {
+                TextBoxHistory.Text = TextBoxHistory.Text + "Dollar(" + TextBoxDisplay.Text + ")";
                 TextBoxDisplay.Text = Convert.ToString(Convert.ToDouble(TextBoxDisplay.Text) * 1.1016);
+
             }
         }
 
@@ -68,11 +71,14 @@ namespace Calculator
         {
             if (!clearNext)
             {
+                
                 /* Here are all the variables that we are going to need to use */
                 int i, n;
                 int[] a = new int[10];
                 string finalResult = "";
                 clearNext = true;
+
+                
 
                 if (TextBoxDisplay.Text.Contains("."))
                 {
@@ -82,7 +88,6 @@ namespace Calculator
                 else
                 {
                     n = Convert.ToInt32(TextBoxDisplay.Text);
-                    TextBoxHistory.Text = n + " =";
 
                     if (n < 0)
                     {
@@ -103,6 +108,7 @@ namespace Calculator
 
                     }
 
+                    TextBoxHistory.Text = TextBoxHistory.Text + "bin(" + TextBoxDisplay.Text + ")";
                     TextBoxDisplay.Text = finalResult;
 
                 }
@@ -116,6 +122,7 @@ namespace Calculator
         {
             if (!clearNext)
             {
+                TextBoxHistory.Text = TextBoxHistory.Text + "hex(" +TextBoxDisplay.Text+")";
                 clearNext = true;
                 if (TextBoxDisplay.Text.Contains("."))
                 {
@@ -172,7 +179,6 @@ namespace Calculator
                     }
 
                     TextBoxDisplay.Text = finalResult;
-                    TextBoxHistory.Text = index + " =";
                 }
             }
         }

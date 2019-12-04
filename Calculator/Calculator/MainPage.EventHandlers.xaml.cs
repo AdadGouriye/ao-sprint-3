@@ -39,15 +39,18 @@ namespace Calculator
 
         private void buttonBackspace_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBoxDisplay.Text.EndsWith(","))
+            if (!clearNext)
             {
-                comma = false;
-            }
-            TextBoxDisplay.Text = TextBoxDisplay.Text.Remove(TextBoxDisplay.Text.Length - 1);
-            if (TextBoxDisplay.Text.Length == 0)
-            {
-                TextBoxDisplay.Text = "0";
+                if (TextBoxDisplay.Text.EndsWith(","))
+                {
+                    comma = false;
+                }
+                TextBoxDisplay.Text = TextBoxDisplay.Text.Remove(TextBoxDisplay.Text.Length - 1);
+                if (TextBoxDisplay.Text.Length == 0)
+                {
+                    TextBoxDisplay.Text = "0";
+                }
             }
         }
-    }
+    }   
 }

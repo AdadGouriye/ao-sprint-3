@@ -150,7 +150,7 @@ namespace Calculator
             }
 
         }
-        /* These are the functions we use to Multiplt, Divide, Sum, Substract and Modulo */
+        /* These are the functions we use to Multiply, Divide, Sum, Substract and Modulo */
         /* The numbers that are stored in the List       */
         private void Multiply()
         {
@@ -162,9 +162,12 @@ namespace Calculator
         private void Divide()
         {
             var index = operations.IndexOf("/");
-            numbers[index] = numbers[index] / numbers[index + 1];
-            operations.RemoveAt(index);
-            numbers.RemoveAt(index + 1);
+            {
+                numbers[index] = numbers[index] / numbers[index + 1];
+                operations.RemoveAt(index);
+                numbers.RemoveAt(index + 1);
+            }
+            
         }
         private void Sum()
         {
