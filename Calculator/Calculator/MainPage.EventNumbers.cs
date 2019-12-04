@@ -25,7 +25,7 @@ namespace Calculator
     {
         private void buttonN0_Click(object sender, RoutedEventArgs e)
         {
-            if (clearNext) /* This if-statment empties the TextBoxDisplay  */
+            if (clearNext) /* This if-statment empties the TextBoxDisplay and TextBoxHistory  */
             {
                 TextBoxDisplay.Text = String.Empty;
                 TextBoxHistory.Text = String.Empty;
@@ -227,6 +227,12 @@ namespace Calculator
         {
             if (comma == false)
             {
+                if (clearNext)
+                {
+                    TextBoxDisplay.Text = "0";
+                    TextBoxHistory.Text = String.Empty;
+                    clearNext = false;
+                }
                 TextBoxDisplay.Text = TextBoxDisplay.Text + ".";
                 comma = true;
             }
